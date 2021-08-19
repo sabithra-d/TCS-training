@@ -1,0 +1,23 @@
+n=int(input())
+for i in range(n):
+    s=input().split()
+    a=int(s[1])
+    if a == 3:
+        charge=30
+    elif a == 24:
+        charge= 80
+    else:
+        charge=((a-3)*5)+30
+    print(s[0],s[1],'%.2f'%charge)
+        
+   //ip:
+   3
+   1867 3
+   5382 5
+   2407 24
+   //op:
+   1867 3 30.00
+   5382 5 40.00
+   2407 24 80.00
+        
+    
