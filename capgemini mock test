@@ -1,0 +1,16 @@
+//ip:123
+//op:0
+//ip:1210
+//op:3
+
+
+n=int(input())
+l=[]
+while(n != 0):
+    r = n % 10
+    l.append(r)
+    n=n//10
+if 0 in l:
+    print(len(l)-1)
+else:
+    print("0")
