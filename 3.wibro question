@@ -1,0 +1,21 @@
+//EVEN  NUMBERS FIRST THEN ODD NUMBERS IN A LIST
+n=int(input())
+l=[]
+for i in range(n):
+    n1=input()
+    n2=int(n1)
+    l.append(n2)
+l1=[]
+l2=[]
+for i in l:
+    if (i % 2 == 0):
+        l1.append(i)
+    else:
+        l2.append(i)
+l1.extend(l2)
+print(l1)
+//ip:
+8
+10 98 3 33 12 22 21 11
+//op:
+10 98 12 22 3 33 21 11
