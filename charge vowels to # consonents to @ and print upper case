@@ -1,0 +1,15 @@
+str1=input()
+str2=input()
+str3=input()
+vowels="aeiouAEIOU"                 //chamge vowels to # symbol
+for j in vowels:
+    str1=str1.replace(j,"#")
+print(str1)
+for k in str2:
+    if (k != 'a' and k != 'e' and k != 'i' and k != 'o' and k != 'u'):      //change consonents to @ symbol
+        str2=str2.replace(k,"@")
+print(str2)
+res3=str3.upper()
+print(res3)                           //change the string to uppercase
+    
+    
