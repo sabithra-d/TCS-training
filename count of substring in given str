@@ -1,0 +1,25 @@
+def count_substring(string, sub_string):
+    c=0
+    l=len(sub_string)
+    for i in range(len(string)):
+        s=string[i:i+l]
+        if s==sub_string:
+            c+=1
+    return c
+
+if __name__ == '__main__':
+    string = input()
+    sub_string = input()
+    
+    count = count_substring(string, sub_string)
+    print(count)
+    
+    //aabb(main string)
+    //aa(substring)
+    //1(output)
+    
+    
+    //ababab(main string)
+    //ab(substring)
+    //3(output)
+    
