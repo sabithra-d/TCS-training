@@ -1,0 +1,44 @@
+/*
+Armstrong Numbers Below the Intervals
+
+Write a C Program to Display Armstrong Number Between Two Intervals
+If there is no elements print No elements
+
+Input Format
+Input contains the start and end range
+Output Format
+Print the values separated by space
+Constraints
+1 <= start < end <= 1000000
+Sample Input
+100 500 
+Sample Output
+153 370 371 407
+
+560 
+
+Sample Input
+10 100
+
+Sample Output
+No elements
+
+*/
+
+
+
+lower = int(input())
+upper = int(input())
+
+for num in range(lower, upper + 1):
+   length = len(str(num))
+   sum = 0
+   temp = num
+   while temp > 0:
+       digit = temp % 10
+       sum += digit ** length
+       temp //= 10
+   if num == sum:
+       print(num,end=" ")
+   else:
+       print("Noelements)
