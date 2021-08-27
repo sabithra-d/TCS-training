@@ -1,0 +1,47 @@
+n=int(input())
+arr=list(map(int,input().split()))
+n1=int(input())
+count=0
+for i in arr:
+    if n1 == i:
+        count+=1
+print(n1 ,'-', count) 
+ 
+ 
+    
+Total_miles=int(input())
+gasoline_price=int(input())
+Miles_per_gallon=int(input())
+parking_fees=int(input())
+Tolls=int(input())
+
+
+
+n=int(input())
+for i in range(1,n+1):
+    if n % i == 0:
+        print(i,end=" ")
+  
+  
+        
+string=input()
+count=0
+for i in string:
+    if(i == 'a' or i == 'e' or i == 'i' or i == 'o' or i == 'u' or i == 'A' or i == 'E' or i == 'I' or i == 'O' or i == 'U'):
+        count+=1
+print("Count of vowels in ",string,"is",count)
+
+
+n=int(input())
+sum=0
+for i in range(1,n+1):
+    sum=sum+i
+print(sum)
+        
+Total_miles=int(input())
+gasoline_price=int(input())
+Miles_per_gallon=int(input())
+parking_fees=int(input())
+Tolls=int(input())
+Daily_driving_cost=(Total_miles/Miles_per_gallon)*gasoline_price+parking_fees+Tolls
+print("Cost:%.2f" %Daily_driving_cost)
