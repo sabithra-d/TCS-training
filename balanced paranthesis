@@ -1,0 +1,43 @@
+/*
+Balanced paranthesis
+
+A sequence of parantheses is called balanced if it consists of pairs of opening and closing
+paranthesis (in that order) which is well nested..For example sequence "(())()", "()" and 
+(()(())) are balanced while "(()" and (())( are not.
+Write a function to determine if a given string contains balanced sequence of paratheses.
+The input to the function **balancedParantheses** is a string str. Each character in the 
+string will be "(" or ")". The output is the count of balanced pairs if the sequence is balance
+or -1 otherwise
+
+For example, if the input sequence is "(()(()))" , the output is 4
+Sample Input
+(()) 
+
+Sample Output
+2
+Sample Input 
+()(
+
+Sample Output    
+-1
+*/
+
+#include <stdio.h>
+int main()
+{
+    char str[100];
+    int len,i,count=0;
+    scanf("%s",str);
+    for(len=0;str[len] != '\0';len++);
+    for(i=0;str[i]!='\0' && count!=-1;i++)
+    {
+        if(str[i] == '(')
+            count+=1;
+        else
+            count-=1;
+    }
+    if(count == 0)
+        printf("%d",len/2);
+    else
+        printf("-1");
+}
