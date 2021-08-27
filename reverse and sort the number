@@ -1,0 +1,58 @@
+/* 
+Mr.Jason has captured your friend and has put a color around his neck.He has locked the collar with a given "locking key" . Now it
+can only be opened with an "unlocking key". Your friend has seen the "locking key" but he does not know how to nd the "unlocking
+key". You can calculate the "unlocking key" if you have the "locking key" because it willbe the smallest(in magnitude) permutation of
+the digits of the "locking key" amd will never start with zero
+Help your friend write an algorithm that takes the "locking key" as an input and outputs the "unlocking key"
+
+63453   1 to 9
+
+3 5 4 3 6 
+op:   --> 33456
+*/ 
+
+n=int(input())
+l=[]
+while(n != 0):
+    r=n%10
+    l.append(r)
+    n=n//10
+l.sort()
+for i in l:
+    print(i,end="")
+   
+   
+   
+ #include<stdio.h>   
+ int main()
+{
+    int num,ans=0,i,temp,dig,zp=1;
+    scanf("%d",&num); 
+    temp=num;    
+    while(num)  //find the no of zeros
+    {
+        if(num%10==0) 
+          zp=zp*10;  
+        num=num/10;
+    }
+    for(i=1;i<=9;i++)  
+    {   
+        num=temp;
+        while(num)  
+        {
+          dig=num%10;  
+          if(dig==i)
+            {
+                ans=ans*10+dig; 
+                if(ans<10)  //after fst digit
+                  ans=ans*zp;
+           }
+        num=num/10;  
+          
+        }
+        
+    }
+    printf("%d",ans);
+}
+
+
