@@ -1,0 +1,16 @@
+n=int(input())
+n1=int(input())
+a=(n*n1)-1
+print("Minimum number of times is",a)
+
+//ip:
+1
+2
+//op:
+1
+
+//ip:
+2
+2
+//op:
+3
