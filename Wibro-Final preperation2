@@ -1,0 +1,24 @@
+A company wishes to encode its data. The data is in the form of a number. They wish to encode the data with
+respect to a specific digit. They wish to count the number of times the specific digit (i.e 0-9) reoccurs in
+the given data so that they can encode the data accordingly.
+Write an algorithm to find the count of the specific digit in the given data.
+Input
+The input consists of two space-separated integers data and digit, representing the data to be encoded and the digit to be counted in the data.
+Output
+Print an integer representing the count of the specific digit.
+Example
+Input: 
+572378233 3
+Output:
+3
+
+
+n=int(input())
+d=int(input())
+count=0
+while(n!=0):
+    r=n%10
+    if(r==d):
+        count+=1 
+    n=n//10
+print(count)
