@@ -1,0 +1,71 @@
+/*
+You are playing an online game. In the game, a numbers is displayed on the screen.
+In order to win the game, you have to Count the trailing zeros in the factorial value of the
+given number. Write an algorithm to count the trailing zeros in the factorial value of the given number.
+
+Input
+The input consists of an integer num, representing the number displayed on the screen.
+Output
+Print An integer representing the count of trailing zeros in the factorial of the given numbers.
+Note
+The factorial of the number is calculated as the product of integer numbers from 1 to num.
+
+Example
+Input
+5
+Output:
+1
+
+
+
+5!--> 120  --> 1 
+6! -> 720  --> 1 
+7! -> 5040 -> 1 
+
+
+10! -->3628800 --> 2 
+
+11!-->39916800 --> 2 
+12 ,13,14  --> 2
+
+15 -> 3 
+20 -> 4 
+25 -> 5 + 1(25)  --> 6 
+
+
+100 --> 20+ 4 --> 24 
+
+
+250 --> 50(5)+ 10(25)+2(125) --> 62 
+*/
+
+#include<stdio.h>
+int main()
+{
+    int n,d=5,ans=0;
+    scanf("%d",&n); 
+     while(n/d)   
+     {
+        ans=ans+n/d;   
+        d=d*5; 
+     }
+     printf("%d",ans);   
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
