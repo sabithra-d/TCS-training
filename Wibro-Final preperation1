@@ -1,0 +1,38 @@
+An e-commerce site wishes to enhance its rdering process. They plan to implement a new
+scheme of OTP (one time password) generation for order confirmation. The OTP can be any number of digits. 
+For OTP generation, the user will be asked to enter two random numbers. The first number entered should
+always be smaller than the second number. The OTP is calculated as the sum of the maximum and the minimum 
+prime values in the range of the user-entered numbers.
+Write an algorithm to find the OTP.
+Input
+The input consists of two space-separated integers - firstNumber and secondNumber,representing the two numbers  entered by the user. Both numbers are considered in the range.
+Output
+Print an integer representing the sum of the largest and smallest prime numbers in the range of given numbers.
+Example
+Input:
+10 24      11 13 16 17 19 22 23   11+23=34
+Output:
+34
+
+start=int(input())
+end=int(input())
+l=[]
+for i in range(start,end+1):
+    for j in range(2,i):
+        if i % j == 0:
+            break
+    else:
+        l.append(i)
+a=min(l)
+b=max(l)
+print(a+b)
+    
+
+
+
+
+
+
+
+
+
