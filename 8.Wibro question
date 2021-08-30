@@ -1,0 +1,35 @@
+5
+10 30 20 50 40
+2
+op:
+100 80 60 40 20
+
+
+n=int(input())
+arr=list(map(int,input().split()))
+n1=int(input())
+l=[]
+for i in arr:
+    l.append(i*n1)
+l.sort(reverse=True)
+for i in l:
+    print(i,end=" ")
+
+    
+4    
+1 
+2 3
+4 5 6
+7 8 9 10
+
+rows=int(input())
+number=1
+i=1
+while(i<=rows):
+    j=1
+    while(j<=i):
+        print(number,end=" ")
+        number=number+1
+        j=j+1
+    i=i+1
+    print()
