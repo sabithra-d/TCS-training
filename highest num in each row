@@ -1,0 +1,44 @@
+/*
+A company has a sales record of N products for M days. The company wishes to know the
+maximum revenue received from a given product of the N products each day. Write an algorithm
+to find the highest revenue received each day.
+Input
+The first line of the input consists of two space-separatedIntegers-days (M) and products(N),
+representing the days and the products in the sales record.
+The next M lines consist of N space-separated integers representing the sales revenue received 
+from each product each day.
+
+Output
+Print M space-separated integers representing the maximum received each day.
+Example
+Input
+3 4
+100 198 333 323
+122 232 221 111  
+223 565 245 764 
+
+Output:
+333 232 764 
+*/
+
+#include<stdio.h> 
+int main()
+{
+    int n,m,arr[100][100],row,col,max;
+    scanf("%d %d",&n,&m);
+    for(row=0;row<n;row++)
+      for(col=0;col<m;col++)
+        scanf("%d",&arr[row][col]);
+    for(row=0;row<n;row++)  
+    {   
+        max=0;
+        for(col=0;col<m;col++)
+         {
+            if(max<arr[row][col]) 
+              max=arr[row][col];  
+         }
+         printf("%d ",max); 
+    }
+    
+}
+
