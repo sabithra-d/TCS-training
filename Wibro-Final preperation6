@@ -1,0 +1,51 @@
+Write an algorithm to generate the token number from the applicant ID.
+
+Input
+
+The input consists of an integer applicant!! representing the application ID of the
+
+applicant.
+
+Output
+
+Print an integer representing the token
+
+number.
+
+Constraint
+
+0<applicantID ≤ 109
+
+Note
+
+0 is considered as an even digit and 1 Is considered as an odd digit.
+
+Example
+
+Input
+
+245567
+
+Output
+
+354476
+
+
+
+n=int(input())
+sum=0
+while(n != 0):
+    r=n%10
+    if(r % 2 == 0):
+        r+=1 
+        sum=sum*10+r
+    else:
+        r-=1 
+        sum=sum*10+r
+    n=n//10
+sum1=0
+while(sum != 0):
+    r1=sum%10
+    sum1=sum1*10+r1
+    sum=sum//10
+print(sum1)
